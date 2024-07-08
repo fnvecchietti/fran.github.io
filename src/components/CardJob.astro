@@ -22,8 +22,6 @@ const {
 } = Astro.props;
 
 const prefixUrl = import.meta.env.BASE_URL;
-console.log(prefixUrl)
-console.log(pageurl)
 const tagsSplitted: string[] = [];
 if (tags) {
   tags.split(",").forEach((tag: string) => {
@@ -31,9 +29,9 @@ if (tags) {
   });
 }
 ---
-<a href={prefixUrl + pageurl}>
+<a href={prefixUrl + pageurl} class="mx-3 my-3 h-3/4">
 <div
-  class="max-w-sm rounded overflow-hidden shadow-lg flex flex-col effect h-3/4 bg-background">
+  class="max-w-sm rounded overflow-hidden shadow-lg flex flex-col effect min-h-full  bg-background">
   
     <img
       class="w-full pt-1 h-52"
@@ -64,7 +62,6 @@ if (tags) {
 
 <style>
   .effect {
-    transition:linear;
     transition-duration: 0.4s;
     cursor: pointer;
   }
