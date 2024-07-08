@@ -1,0 +1,52 @@
+---
+import CardJob from './CardJob.astro';
+import PrevSectionButton from './PrevSectionButton.astro';
+
+---
+
+<section id="experience" class="relative h-screen w-full max-h-screen flex flex-col">
+	<h1 class="text-textPrimary font-extrabold sm:text-5xl md:text-5xl mx-auto py-5">Experience</h1>
+    <div class="flex flex-wrap justify-center space-x-5 h-full">
+        <CardJob
+		position="Technical Lead"
+		company="Wind River Systems"
+		dateStart="Sep 2020"
+		dateEnd="Present"
+		summary="As a Technical Lead overseeing a global team of 20 developers, I consistently ensure the delivery of optimal solutions aligned with client specifications."
+		imageUri="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1svsnyC49BwCZ2sVOWrqz-ssQoffHdzvxTA&s",
+		tags="Technical Lead, Global Team Management, Solution Delivery, Angular, Docker, Kubernetes, Jenkins"
+		pageurl="/jobs/windriver"
+		/>
+		<CardJob
+		position="Fullstack Engineer"
+		company="Globant"
+		dateStart="Aug 2019"
+		dateEnd="Sep 2020"
+		summary="As a Fullstack developer ..."
+		imageUri="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/IDDQ7UNTWZDKRB4XDV6SWY5NUA.jpg",
+		tags="Fullstack developer, Angular,ReactJS, Docker, NodeJS"
+		pageurl="/jobs/globant"
+		/>
+		<CardJob
+		position="Frontend Developer"
+		company="Thomson Reuters"
+		dateStart="Jun 2020"
+		dateEnd="Aug 2020"
+		summary="As a Frontend developer"
+		imageUri="https://www.thomsonreuters.com.ar/content/dam/ewp-m/images/argentina/es/artworked-images/tr-logo-thumb.png.transform/rect-768/q90/image.png",
+		tags="Angular, Frontend, Wijjmo, 3rd party libraries, ERP"
+		pageurl="/jobs/thomsonreuters"
+		/>
+		<CardJob
+		position="Frontend developer"
+		company="Medeatec"
+		dateStart="Jul 2018"
+		dateEnd="Jun 2019"
+		summary="As a Frontend developer"
+		imageUri="https://media.licdn.com/dms/image/C4D0BAQE8FzOLZKcK1g/company-logo_200_200/0/1672669967997/medeatec_logo?e=2147483647&v=beta&t=yMDeMlYQiUvcl1u05MHsrMOlnQociZy_Ogceb27d2l0",
+		tags="Frontend, AngularJS, GoogleCharts, riskManagmentTool, 3rd party libraries, NodeJS"
+		pageurl="/jobs/medeatec"
+		/>
+    </div>
+	<PrevSectionButton sectionId="#introduction"/>
+</section id="experience">

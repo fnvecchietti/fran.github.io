@@ -1,0 +1,70 @@
+---
+interface CardJobProps {
+  imageUri: string;
+  dateStart: string;
+  dateEnd: string;
+  summary: string;
+  company: string;
+  position: string;
+  tags: string;
+  pageurl: string;
+}
+
+const {
+  imageUri,
+  company,
+  dateStart,
+  dateEnd,
+  summary,
+  tags,
+  position,
+  pageurl,
+} = Astro.props;
+const tagsSplitted: string[] = [];
+if (tags) {
+  tags.split(",").forEach((tag: string) => {
+    tagsSplitted.push(tag.trim());
+  });
+}
+---
+<a href={pageurl}>
+<div
+  class="max-w-sm rounded overflow-hidden shadow-lg flex flex-col effect h-3/4 bg-background">
+  
+    <img
+      class="w-full pt-1 h-52"
+      src={imageUri}
+      alt="Sunset in the mountains"
+    />
+    <div class="px-6 py-4">
+      <h1 class="font-bold text-xl mb-2">{company}</h1>
+      <h2>{position}</h2>
+      <h3>From: {dateStart} - {dateEnd}</h3>
+      <p class="text-gray-700 text-base">
+        <span>{summary}</span>
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2 mt-auto h-36">
+      {
+        tagsSplitted.map((tag: string) => {
+          return (
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              {tag}
+            </span>
+          );
+        })
+      }
+    </div>
+</div>
+</a>
+
+<style>
+  .effect {
+    transition:linear;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .effect:hover {
+    scale: 1.2;
+  }
+</style>
