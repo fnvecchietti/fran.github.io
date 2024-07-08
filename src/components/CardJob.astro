@@ -20,6 +20,10 @@ const {
   position,
   pageurl,
 } = Astro.props;
+
+const prefixUrl = import.meta.env.BASE_URL;
+console.log(prefixUrl)
+console.log(pageurl)
 const tagsSplitted: string[] = [];
 if (tags) {
   tags.split(",").forEach((tag: string) => {
@@ -27,7 +31,7 @@ if (tags) {
   });
 }
 ---
-<a href={pageurl}>
+<a href={prefixUrl + pageurl}>
 <div
   class="max-w-sm rounded overflow-hidden shadow-lg flex flex-col effect h-3/4 bg-background">
   
