@@ -29,9 +29,9 @@ if (tags) {
   });
 }
 ---
-<a href={prefixUrl + pageurl} class="mx-3 my-3 h-3/4">
+<a href={prefixUrl + pageurl} class="sm:mx-3 my-3 w-full sm:w-fit">
 <div
-  class="max-w-sm rounded overflow-hidden shadow-lg flex flex-col effect min-h-full  bg-background">
+  class="max-w-sm rounded overflow-hidden shadow-lg flex flex-col effect min-h-full mx-auto bg-background">
   
     <img
       class="w-full pt-1 h-52"
@@ -46,7 +46,7 @@ if (tags) {
         <span>{summary}</span>
       </p>
     </div>
-    <div class="px-6 pt-4 pb-2 mt-auto h-36">
+    <div class="px-6 pt-4 pb-2 mt-auto h-36 hidden sm:block">
       {
         tagsSplitted.map((tag: string) => {
           return (
